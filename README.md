@@ -1,0 +1,1 @@
+# kata-lights-out-1
