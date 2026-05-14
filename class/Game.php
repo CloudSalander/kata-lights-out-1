@@ -24,6 +24,16 @@ class Game {
         }
     }
 
+    public function pushBox(int $i, int $j): void {
+        //TODO: validate this input
+        //TODO:Obviouslly we have to refactor that
+        if(isset($this->boxes[$i-1][$j]))  $this->boxes[$i-1][$j] =  !$this->boxes[$i-1][$j];
+        if(isset($this->boxes[$i+1][$j]))  $this->boxes[$i+1][$j] =  !$this->boxes[$i+1][$j];
+        if(isset($this->boxes[$i][$j+1]))  $this->boxes[$i][$j+1] =  !$this->boxes[$i][$j+1];
+        if(isset($this->boxes[$i][$j-1]))  $this->boxes[$i][$j-1] =  !$this->boxes[$i][$j-1];
+        $this->print();
+    }
+
     private function initializeGame(): void {
         //TODO: Sure we can do this better or less manually 
         for($i = 0; $i < self::ROWS; ++$i) {
