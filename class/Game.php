@@ -37,7 +37,6 @@ class Game {
             $currentColumn = $j+$y;
             if(isset($this->boxes[$currentRow][$currentColumn])) $this->switchBox($currentRow,$currentColumn);
         }
-
         $this->print();
     }
 
