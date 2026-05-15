@@ -27,6 +27,7 @@ class Game {
     public function pushBox(int $i, int $j): void {
         //TODO: validate this input
         //TODO:Obviouslly we have to refactor that
+        if(isset($this->boxes[$i][$j])) $this->boxes[$i][$j] = !$this->boxes[$i][$j];
         if(isset($this->boxes[$i-1][$j]))  $this->boxes[$i-1][$j] =  !$this->boxes[$i-1][$j];
         if(isset($this->boxes[$i+1][$j]))  $this->boxes[$i+1][$j] =  !$this->boxes[$i+1][$j];
         if(isset($this->boxes[$i][$j+1]))  $this->boxes[$i][$j+1] =  !$this->boxes[$i][$j+1];
